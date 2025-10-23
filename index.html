@@ -3,44 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name - Engineering Portfolio</title>
+  <title>Your Name - Mechanical Engineering Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #f8f9fa;
+      margin: 0;
+      background-color: #f4f6f8;
       color: #333;
     }
-    h1 {
-      color: #0066cc;
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background: #00509e;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #00509e;
+      border-bottom: 2px solid #00509e;
+      padding-bottom: 0.25rem;
     }
     .project {
-      border: 1px solid #ddd;
+      margin-bottom: 1.5rem;
+    }
+    .project img {
+      width: 100%;
       border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 20px;
-      background-color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin-top: 0.5rem;
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #aad4ff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <h1>Your Name — Mechanical Engineering Portfolio</h1>
-  <p>Welcome! I’m a Mechanical Engineering student currently on placement. I enjoy design, thermofluids, and CAD modelling. Below are some of my key projects:</p>
-  
-  <div class="project">
-    <h2>Project 1: V10 Engine CAD Design</h2>
-    <p>Developed a SolidWorks model of a V10 engine inspired by the Porsche Carrera GT, focusing on structural mounting and thermal routing.</p>
-  </div>
+  <header>
+    <h1>Your Name</h1>
+    <p>Mechanical Engineering Student | University of Leicester</p>
+    <p>Passionate about design, analysis, and innovation in mechanical systems</p>
+  </header>
 
-  <div class="project">
-    <h2>Project 2: Front Chassis Redesign</h2>
-    <p>Used surfacing and FEA to redesign a Porsche 918 front chassis for a lightweight hypercar application.</p>
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a Mechanical Engineering student currently completing a Year in Industry, where I am applying design, analysis, and problem-solving skills to real-world engineering challenges. I enjoy working with CAD software, simulation tools, and hands-on prototyping, and I am motivated by the process of turning ideas into functional designs.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>CAD:</strong> SolidWorks, Fusion 360, AutoCAD</li>
+      <li><strong>Simulation:</strong> ANSYS, SolidWorks Simulation, MATLAB</li>
+      <li><strong>Programming:</strong> Python, MATLAB</li>
+      <li><strong>Manufacturing:</strong> CNC Machining, 3D Printing, Metal Fabrication</li>
+      <li><strong>Analysis:</strong> FEA, CFD, Thermodynamics, Fluid Mechanics</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>V10 Engine CAD Design</h3>
+      <p>Developed a detailed SolidWorks model of a V10 engine inspired by the Porsche Carrera GT. Focused on component packaging, structural mounting, and heat management for realistic integration into a high-performance vehicle bay.</p>
+      <img src="images/v10_engine.jpg" alt="V10 Engine CAD Model" />
+    </div>
+
+    <div class="project">
+      <h3>Front Chassis Redesign</h3>
+      <p>Reverse-engineered and redesigned the front chassis of a Porsche 918 using 3D surfacing techniques in SolidWorks. Adapted the structure for a hypercar concept, optimising rigidity and weight distribution through finite element analysis.</p>
+      <img src="images/front_chassis.jpg" alt="Front Chassis Redesign" />
+    </div>
+
+    <div class="project">
+      <h3>Thermofluid Systems Study</h3>
+      <p>Analysed heat exchange and fluid flow efficiency within a compact radiator design using CFD techniques. Implemented design changes that improved flow uniformity and reduced thermal resistance by 15%.</p>
+      <img src="images/thermofluid.jpg" alt="Thermofluid Simulation" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+  </section>
 
   <footer>
-    <p>Contact: <a href="mailto:your.email@example.com">your.email@example.com</a> | 
-    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+    <p>&copy; 2025 Your Name | Mechanical Engineering Portfolio</p>
   </footer>
 </body>
 </html>
+
