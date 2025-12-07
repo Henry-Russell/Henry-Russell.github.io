@@ -25,6 +25,7 @@
       font-size: 1.1rem;
       margin-top: 0.5rem;
     }
+
     nav {
       background: #00509e;
       display: flex;
@@ -40,6 +41,7 @@
     nav a:hover {
       text-decoration: underline;
     }
+
     section {
       max-width: 900px;
       margin: 2rem auto;
@@ -53,13 +55,42 @@
       border-bottom: 2px solid #00509e;
       padding-bottom: 0.25rem;
     }
+
+    /* ABOUT SECTION WITH IMAGE */
+    #about {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    #about img {
+      width: 220px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    @media (max-width: 700px) {
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+      #about img {
+        width: 60%;
+      }
+    }
+
+    /* PROJECTS */
     .project {
+      display: flex;
+      gap: 1rem;
       margin-bottom: 1.5rem;
+      align-items: flex-start;
     }
     .project img {
-      width: 100%;
+      width: 180px;
       border-radius: 8px;
-      margin-top: 0.5rem;
+      flex-shrink: 0;
+    }
+    .project-text {
+      flex: 1;
     }
     .project a {
       display: inline-block;
@@ -71,6 +102,7 @@
     .project a:hover {
       text-decoration: underline;
     }
+
     footer {
       background: #003366;
       color: white;
@@ -85,6 +117,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Henry Russell</h1>
     <p>Mechanical Engineering Student | University of Leicester</p>
@@ -99,8 +132,12 @@
   </nav>
 
   <section id="about">
-    <h2>About Me</h2>
-    <p>I am a Mechanical Engineering student currently completing a Year in Industry, where I am applying design, analysis, and problem-solving skills to real-world engineering challenges. I enjoy working with CAD software, hands-on prototyping and I am motivated by the process of turning ideas into functional designs.</p>
+    <img src="images/me.jpg" alt="Photo of Henry" />
+
+    <div>
+      <h2>About Me</h2>
+      <p>I am a Mechanical Engineering student currently completing a Year in Industry, where I am applying design, analysis, and problem-solving skills to real-world engineering challenges. I enjoy working with CAD software, hands-on prototyping, and I am motivated by the process of turning ideas into functional designs.</p>
+    </div>
   </section>
 
   <section id="skills">
@@ -118,36 +155,43 @@
     <h2>Projects</h2>
 
     <div class="project">
-      <h3>V10 Engine CAD Design</h3>
-      <p>Lead the development of a detailed SolidWorks model of a V10 engine design inspired by the old F1 V10s. Focused on component packaging and structural mounting for realistic integration into a high-performance vehicle bay.</p>
       <img src="images/engine1.png" alt="V10 Engine CAD Model" />
-      <a href="projects/v10-engine.html">View full project →</a>
+      <div class="project-text">
+        <h3>V10 Engine CAD Design</h3>
+        <p>Lead the development of a detailed SolidWorks model of a V10 engine design inspired by the old F1 V10s. Focused on component packaging and structural mounting for realistic integration into a high-performance vehicle bay.</p>
+        <a href="projects/v10-engine.html">View full project →</a>
+      </div>
     </div>
 
     <div class="project">
-      <h3>Reverse Engineering</h3>
-      <p>Implemented 3D scanning techniques to reverse engineer parts, such as wishbones and engine mounts, in SolidWorks. This was a research and development exercise used for future implementation of the V10 engine into a future hypercar project.</p>
-      <img src="images/front_chassis.jpg" alt="Engine mounts" />
-      <a href="projects/reverse-engineering.html">View full project →</a>
+      <img src="images/front_chassis.jpg" alt="Front Chassis Reverse Engineering" />
+      <div class="project-text">
+        <h3>Reverse Engineering</h3>
+        <p>Implemented 3D scanning techniques to reverse engineer parts, such as wishbones and engine mounts, in SolidWorks. This was a research and development exercise used for future implementation of the V10 engine into a future hypercar project.</p>
+        <a href="projects/reverse-engineering.html">View full project →</a>
+      </div>
     </div>
 
     <div class="project">
-      <h3>Carbon Fiber Skinning</h3>
-      <p>Skinned parts from a Porsche GT3 RS, such as aerofoil mounts, front and rear vents, and an engine cover, in carbon fiber.</p>
-      <img src="images/thermofluid.jpg" alt="Porsche GT3 RS engine cover" />
-      <a href="projects/carbon-fiber.html">View full project →</a>
+      <img src="images/thermofluid.jpg" alt="Carbon Fiber Work" />
+      <div class="project-text">
+        <h3>Carbon Fiber Skinning</h3>
+        <p>Skinned parts from a Porsche GT3 RS, such as aerofoil mounts, front and rear vents, and an engine cover, in carbon fiber.</p>
+        <a href="projects/carbon-fiber.html">View full project →</a>
+      </div>
     </div>
+
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
     <p><strong>Email:</strong> <a href="mailto:henryrussell4587@gmail.com">henryrussell4587@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/henry-russell-2a4489325" target="_blank">https://www.linkedin.com/in/henry-russell-2a4489325</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/henry-russell-2a4489325" target="_blank">Visit my LinkedIn</a></p>
   </section>
 
   <footer>
     <p>&copy; 2025 Henry Russell | Mechanical Engineering Portfolio</p>
   </footer>
+
 </body>
 </html>
-
