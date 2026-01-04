@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V10 Engine CAD Design</title>
+  <title>V10 Engine CAD Design | Henry Russell</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,29 +11,96 @@
       background-color: #f4f6f8;
       color: #333;
     }
+
     header {
-      background: #003366;
+      background-color: #003366;
       color: white;
-      padding: 1.5rem;
       text-align: center;
+      padding: 2rem 1rem;
     }
-    section {
-      max-width: 900px;
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 1000px;
       margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    section {
       background: white;
-      padding: 1rem 1.5rem;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    img {
-      width: 100%;
+
+    h2 {
+      color: #00509e;
+      border-bottom: 2px solid #00509e;
+      padding-bottom: 0.25rem;
+    }
+
+    /* SKILLS LIST */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
       margin-top: 1rem;
+    }
+
+    .skill {
+      background: #e6eef7;
+      padding: 0.5rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    /* IMAGE GRID */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .image-item {
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
       border-radius: 8px;
     }
-    a {
-      color: #00509e;
-      text-decoration: none;
-      font-weight: bold;
+
+    .image-item p {
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 800px) {
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -41,18 +108,83 @@
 
 <header>
   <h1>V10 Engine CAD Design</h1>
+  <p>SolidWorks Design Project</p>
 </header>
 
-<section>
-  <h2>Overview</h2>
-  <p>A detailed SolidWorks model of a V10 engine inspired by Formula 1-era designs. Focused on packaging, structure, and realistic component placement within a high-performance vehicle bay.</p>
+<main>
 
-  <h2>Images</h2>
-  <img src="../images/conrod.png" alt="V10 Engine CAD Model">
+  <!-- OVERVIEW -->
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This project focuses on the design and packaging of a naturally aspirated V10 engine using SolidWorks. Inspired by high-performance motorsport engines, the work emphasised realistic component layout, structural mounting considerations, and integration within a vehicle engine bay.
+    </p>
+  </section>
 
-  <h2>Back to Portfolio</h2>
-  <a href="../index.html">← Return to home</a>
-</section>
+  <!-- KEY SKILLS -->
+  <section>
+    <h2>Key Skills Demonstrated</h2>
+    <div class="skills-list">
+      <div class="skill">SolidWorks CAD</div>
+      <div class="skill">Complex Assemblies</div>
+      <div class="skill">Design for Packaging</div>
+      <div class="skill">Mechanical Layout</div>
+      <div class="skill">Engineering Documentation</div>
+      <div class="skill">Iterative Design</div>
+    </div>
+  </section>
+
+  <!-- DESIGN PROCESS -->
+  <section>
+    <h2>Design Process</h2>
+    <p>
+      The project began with research into existing V10 engine architectures to establish realistic proportions and component relationships. Individual components were modelled parametrically before being assembled into a full engine layout. Iterative design changes were made to resolve packaging constraints, mounting interfaces, and assembly feasibility. Particular attention was given to alignment, tolerancing assumptions, and the interaction between rotating and stationary components.
+    </p>
+  </section>
+
+  <!-- IMAGE GALLERY -->
+  <section>
+    <h2>Project Gallery</h2>
+    <div class="image-grid">
+
+      <div class="image-item">
+        <img src="../images/v10_1.png" alt="V10 Engine Assembly" />
+        <p>Full Engine Assembly</p>
+      </div>
+
+      <div class="image-item">
+        <img src="../images/v10_2.png" alt="Cylinder Bank Detail" />
+        <p>Cylinder Bank Detail</p>
+      </div>
+
+      <div class="image-item">
+        <img src="../images/v10_3.png" alt="Crankshaft and Bottom End" />
+        <p>Crankshaft & Bottom End</p>
+      </div>
+
+      <div class="image-item">
+        <img src="../images/v10_4.png" alt="Valve Train Components" />
+        <p>Valve Train Components</p>
+      </div>
+
+      <div class="image-item">
+        <img src="../images/v10_5.png" alt="Engine Packaging Study" />
+        <p>Engine Packaging Study</p>
+      </div>
+
+      <div class="image-item">
+        <img src="../images/v10_6.png" alt="Mounting and Interfaces" />
+        <p>Mounting Interfaces</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 Henry Russell | Mechanical Engineering Portfolio</p>
+</footer>
 
 </body>
 </html>
