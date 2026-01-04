@@ -11,41 +11,123 @@
       background-color: #f4f6f8;
       color: #333;
     }
+
+    /* HEADER */
     header {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 2rem;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* PROJECT NAV */
+    .project-nav {
+      background: #00509e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.9rem 1rem;
+      flex-wrap: wrap;
+    }
+    .project-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .project-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTIONS */
     section {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 1.5rem;
+      margin: 2.5rem auto;
+      padding: 1.8rem;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
     h2 {
       color: #00509e;
       border-bottom: 2px solid #00509e;
-      padding-bottom: 0.25rem;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
     }
-    .project {
-      margin-bottom: 2rem;
+
+    /* SUB-SECTIONS */
+    .project-overview, .project-skills, .project-process, .project-images {
+      margin-top: 1.8rem;
     }
-    .project img {
+    .project-overview h3,
+    .project-skills h3,
+    .project-process h3,
+    .project-images h3 {
+      color: #0073c0;
+      border-bottom: 1px solid #0073c0;
+      padding-bottom: 0.3rem;
+      margin-top: 0;
+    }
+
+    /* SKILLS PILLS */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.2rem;
+    }
+    .skill {
+      background: #e9f0f8;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
       width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-      margin: 1rem 0;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-    a {
-      color: #00509e;
-      font-weight: bold;
-      text-decoration: none;
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    a:hover {
-      text-decoration: underline;
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .project-nav {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -53,42 +135,136 @@
 
 <header>
   <h1>University Projects</h1>
-  <p>Mechanical Engineering | University of Leicester</p>
+  <p>Selected Mechanical Engineering Coursework & Design Projects</p>
 </header>
 
-<section>
-  <h2>Design & Analysis Coursework</h2>
+<nav class="project-nav">
+  <a href="#project1">V10 Engine CAD Design</a>
+  <a href="#project2">Carbon Fiber Skinning</a>
+  <a href="#project3">Systems Dynamics Modelling</a>
+</nav>
 
-  <div class="project">
-    <h3>Integrated Engineering Design Project</h3>
-    <img src="../images/university_example1.jpg" alt="University design project">
+<!-- PROJECT 1 -->
+<section id="project1">
+  <h2>V10 Engine CAD Design Project</h2>
+
+  <div class="project-overview">
+    <h3>Overview</h3>
     <p>
-      Team-based design project focused on concept development, CAD modelling,
-      engineering analysis, and design justification.
+      Full engine and engine bay CAD design inspired by high-performance automotive applications. Focused on packaging constraints, mechanical layout, and realistic component integration using SolidWorks.
     </p>
-    <ul>
-      <li>Produced full CAD assemblies and technical drawings</li>
-      <li>Performed stress and deflection calculations</li>
-      <li>Presented final design to academic assessors</li>
-    </ul>
   </div>
 
-  <div class="project">
-    <h3>Materials & Structures Analysis</h3>
-    <img src="../images/university_example2.jpg" alt="Materials project">
-    <p>
-      Analytical and experimental investigation into material behaviour under
-      different loading conditions.
-    </p>
-    <ul>
-      <li>Elasticity, torsion, and buckling calculations</li>
-      <li>Failure mode analysis</li>
-      <li>Formal technical reporting</li>
-    </ul>
+  <div class="project-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-list">
+      <div class="skill">SolidWorks CAD</div>
+      <div class="skill">Complex Assemblies</div>
+      <div class="skill">Design for Packaging</div>
+      <div class="skill">Mechanical Layout</div>
+      <div class="skill">Engineering Documentation</div>
+    </div>
   </div>
 
-  <a href="../index.html">← Back to Portfolio</a>
+  <div class="project-process">
+    <h3>Process</h3>
+    <p>
+      Started with component sketches and exploded diagrams. Progressed to 3D assembly modelling, integrating constraints and motion simulations. Iterative testing ensured optimal fit and manufacturability.
+    </p>
+  </div>
+
+  <div class="project-images">
+    <h3>Images</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160.png?text=V10+Engine+1" alt="V10 Engine CAD 1">
+      <img src="https://via.placeholder.com/300x160.png?text=V10+Engine+2" alt="V10 Engine CAD 2">
+      <img src="https://via.placeholder.com/300x160.png?text=V10+Engine+3" alt="V10 Engine CAD 3">
+    </div>
+  </div>
 </section>
+
+<!-- PROJECT 2 -->
+<section id="project2">
+  <h2>Carbon Fiber Skinning Project</h2>
+
+  <div class="project-overview">
+    <h3>Overview</h3>
+    <p>
+      Composite manufacturing project involving wet layup carbon fiber skinning of performance vehicle components. Emphasis on surface preparation, fibre alignment, and quality finishing.
+    </p>
+  </div>
+
+  <div class="project-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-list">
+      <div class="skill">Composite Manufacturing</div>
+      <div class="skill">Wet Layup</div>
+      <div class="skill">Carbon Fibre Materials</div>
+      <div class="skill">Surface Preparation</div>
+      <div class="skill">Quality Control</div>
+    </div>
+  </div>
+
+  <div class="project-process">
+    <h3>Process</h3>
+    <p>
+      Prepared molds and layered carbon fiber sheets using wet layup techniques. Cured composites under controlled conditions, then finished surfaces with sanding and resin sealing for durability and aesthetics.
+    </p>
+  </div>
+
+  <div class="project-images">
+    <h3>Images</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160.png?text=Carbon+Fiber+1" alt="Carbon Fiber 1">
+      <img src="https://via.placeholder.com/300x160.png?text=Carbon+Fiber+2" alt="Carbon Fiber 2">
+      <img src="https://via.placeholder.com/300x160.png?text=Carbon+Fiber+3" alt="Carbon Fiber 3">
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 3 -->
+<section id="project3">
+  <h2>Systems Dynamics & Control Modelling</h2>
+
+  <div class="project-overview">
+    <h3>Overview</h3>
+    <p>
+      Analytical and simulation-based project focused on modelling dynamic systems using transfer functions, Laplace transforms, and time/frequency response analysis.
+    </p>
+  </div>
+
+  <div class="project-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-list">
+      <div class="skill">System Modelling</div>
+      <div class="skill">Laplace Transforms</div>
+      <div class="skill">MATLAB</div>
+      <div class="skill">Control Theory</div>
+      <div class="skill">Dynamic Analysis</div>
+    </div>
+  </div>
+
+  <div class="project-process">
+    <h3>Process</h3>
+    <p>
+      Developed mathematical models using Laplace transforms and transfer functions. Simulated responses in MATLAB, validated models, and iteratively refined system parameters for accurate dynamic prediction.
+    </p>
+  </div>
+
+  <div class="project-images">
+    <h3>Images</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160.png?text=Systems+1" alt="Systems Dynamics 1">
+      <img src="https://via.placeholder.com/300x160.png?text=Systems+2" alt="Systems Dynamics 2">
+      <img src="https://via.placeholder.com/300x160.png?text=Systems+3" alt="Systems Dynamics 3">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Henry Russell | Mechanical Engineering Portfolio</p>
+</footer>
 
 </body>
 </html>
+
