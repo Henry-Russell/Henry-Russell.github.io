@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carbon Fiber Skinning Project</title>
+  <title>Carbon Fiber Skinning | Henry Russell</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,55 +12,148 @@
       color: #333;
     }
     header {
-      background: #003366;
+      background-color: #003366;
       color: white;
-      padding: 1.5rem;
       text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
     }
     section {
       max-width: 900px;
       margin: 2rem auto;
+      padding: 1.5rem;
       background: white;
-      padding: 1rem 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    img {
-      width: 100%;
+    h2 {
+      color: #00509e;
+      border-bottom: 2px solid #00509e;
+      padding-bottom: 0.25rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
       margin-top: 1rem;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: cover;
       border-radius: 8px;
     }
-    a {
-      color: #00509e;
-      text-decoration: none;
-      font-weight: bold;
+    .gallery-item p {
+      margin-top: 0.4rem;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Carbon Fiber Skinning</h1>
-</header>
+  <header>
+    <h1>Carbon Fiber Skinning</h1>
+    <p>Composite Manufacturing Project</p>
+  </header>
 
-<section>
-  <h2>Overview</h2>
-  <p>This project involved applying carbon fiber skinning to Porsche GT3 RS components, including aerofoil mounts, ventilation pieces, and an engine cover. The aim was both aesthetic enhancement and improved durability.</p>
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      Composite manufacturing project focused on carbon fiber skinning of performance vehicle components from a Porsche GT3 RS. Working as part of a team, this project involved preparing moulds, laying up carbon fiber using a wet layup process, and producing high-quality cosmetic and structural composite parts.
+    </p>
+  </section>
 
-  <h2>Process Summary</h2>
-  <ul>
-    <li>Surface preparation and sanding</li>
-    <li>Carbon fabric layout and trimming</li>
-    <li>Epoxy application and curing</li>
-    <li>Final sanding and high-gloss finishing</li>
-  </ul>
+  <section>
+    <h2>Key Skills Demonstrated</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
+        Composite Manufacturing
+      </div>
+      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
+        Wet Layup Process
+      </div>
+      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
+        Materials Handling
+      </div>
+      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
+        Team-Based Manufacturing
+      </div>
+      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
+        Quality Control & Finishing
+      </div>
+    </div>
+  </section>
 
-  <h2>Images</h2>
-  <img src="../images/thermofluid.jpg" alt="GT3 RS carbon fiber skinned engine cover">
+  <section>
+    <h2>Manufacturing Process</h2>
+    <p>
+      The project involved skinning multiple exterior and aerodynamic components, including air intakes, an engine cover, wing mirrors, and aerofoil brackets. Parts were prepared through surface cleaning and release application before carbon fiber sheets were cut, oriented, and laid into moulds using a wet layup process. Resin application, consolidation, curing, trimming, and finishing were carried out with a focus on achieving consistent fibre alignment and surface quality.
+    </p>
+  </section>
 
-  <h2>Back to Portfolio</h2>
-  <a href="../index.html">← Return to home</a>
-</section>
+  <section>
+    <h2>Project Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="../images/carbon_1.jpg" alt="Air intake carbon skinning" />
+        <p>Carbon-fiber skinned air intake</p>
+      </div>
+      <div class="gallery-item">
+        <img src="../images/carbon_2.jpg" alt="Engine cover carbon skinning" />
+        <p>Carbon-fiber engine cover</p>
+      </div>
+      <div class="gallery-item">
+        <img src="../images/carbon_3.jpg" alt="Wing mirror housing" />
+        <p>Carbon-fiber wing mirror housing</p>
+      </div>
+      <div class="gallery-item">
+        <img src="../images/carbon_4.jpg" alt="Aerofoil bracket" />
+        <p>Carbon-fiber aerofoil bracket</p>
+      </div>
+      <div class="gallery-item">
+        <img src="../images/carbon_5.jpg" alt="Layup process" />
+        <p>Wet layup process</p>
+      </div>
+      <div class="gallery-item">
+        <img src="../images/carbon_6.jpg" alt="Finished composite surface" />
+        <p>Finished composite surface</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Henry Russell | Mechanical Engineering Portfolio</p>
+  </footer>
 
 </body>
 </html>
