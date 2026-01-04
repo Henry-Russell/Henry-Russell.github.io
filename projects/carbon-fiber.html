@@ -36,11 +36,26 @@
     h2 {
       color: #00509e;
       border-bottom: 2px solid #00509e;
-      padding-bottom: 0.25rem;
+      padding-bottom: 0.4rem;
     }
-    ul {
-      padding-left: 1.2rem;
+
+    /* SKILLS PILLS (MATCH V10 STYLE) */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.2rem;
     }
+    .skill {
+      background: #e9f0f8;
+      color: #333;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* IMAGE GALLERY */
     .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -58,7 +73,7 @@
     }
     .gallery-item p {
       margin-top: 0.4rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     @media (max-width: 800px) {
       .gallery {
@@ -95,22 +110,13 @@
 
   <section>
     <h2>Key Skills Demonstrated</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
-      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
-        Composite Manufacturing
-      </div>
-      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
-        Wet Layup Process
-      </div>
-      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
-        Materials Handling
-      </div>
-      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
-        Team-Based Manufacturing
-      </div>
-      <div style="background:#f4f6f8; padding:1rem; border-radius:10px; text-align:center; font-weight:bold;">
-        Quality Control & Finishing
-      </div>
+    <div class="skills-list">
+      <div class="skill">Composite Manufacturing</div>
+      <div class="skill">Wet Layup Process</div>
+      <div class="skill">Carbon Fibre Materials</div>
+      <div class="skill">Surface Preparation</div>
+      <div class="skill">Team-Based Manufacturing</div>
+      <div class="skill">Quality Control & Finishing</div>
     </div>
   </section>
 
