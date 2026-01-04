@@ -11,41 +11,123 @@
       background-color: #f4f6f8;
       color: #333;
     }
+
+    /* HEADER */
     header {
       background-color: #003366;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 2rem;
     }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    /* PROJECT NAV */
+    .project-nav {
+      background: #00509e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.9rem 1rem;
+      flex-wrap: wrap;
+    }
+    .project-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .project-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTIONS */
     section {
       max-width: 900px;
-      margin: 2rem auto;
-      padding: 1.5rem;
+      margin: 2.5rem auto;
+      padding: 1.8rem;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
     h2 {
       color: #00509e;
       border-bottom: 2px solid #00509e;
-      padding-bottom: 0.25rem;
+      padding-bottom: 0.4rem;
+      margin-top: 0;
     }
-    .project {
-      margin-bottom: 2rem;
+
+    /* SUB-SECTIONS */
+    .project-overview, .project-skills, .project-process, .project-images {
+      margin-top: 1.8rem;
     }
-    .project img {
+    .project-overview h3,
+    .project-skills h3,
+    .project-process h3,
+    .project-images h3 {
+      color: #0073c0;
+      border-bottom: 1px solid #0073c0;
+      padding-bottom: 0.3rem;
+      margin-top: 0;
+    }
+
+    /* SKILLS PILLS */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.2rem;
+    }
+    .skill {
+      background: #e9f0f8;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
       width: 100%;
-      max-width: 500px;
-      border-radius: 10px;
-      margin: 1rem 0;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
     }
-    a {
-      color: #00509e;
-      font-weight: bold;
-      text-decoration: none;
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    a:hover {
-      text-decoration: underline;
+    @media (max-width: 500px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .project-nav {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -53,42 +135,136 @@
 
 <header>
   <h1>Personal Projects</h1>
-  <p>Independent Engineering & Design Work</p>
+  <p>Self-initiated engineering projects developed outside of university, exploring multiple engineering disciplines.</p>
 </header>
 
-<section>
-  <h2>Self-Initiated Engineering Projects</h2>
+<nav class="project-nav">
+  <a href="#project1">Miniature Turbine Design</a>
+  <a href="#project2">Robotic Arm Prototype</a>
+  <a href="#project3">Eco-friendly Motorbike Frame</a>
+</nav>
 
-  <div class="project">
-    <h3>V10 Engine & Hypercar Concept</h3>
-    <img src="../images/personal_example1.jpg" alt="V10 engine project">
+<!-- PROJECT 1 -->
+<section id="project1">
+  <h2>Miniature Turbine Design</h2>
+
+  <div class="project-overview">
+    <h3>Overview</h3>
     <p>
-      Long-term personal project involving the CAD design and packaging of a V10
-      engine and front chassis concept inspired by high-performance vehicles.
+      Designed and built a small-scale turbine capable of generating electricity from low-pressure water flow, exploring fluid dynamics and energy conversion.
     </p>
-    <ul>
-      <li>Advanced SolidWorks assemblies</li>
-      <li>Packaging constraints and mounting design</li>
-      <li>Reverse engineering using 3D scans</li>
-    </ul>
   </div>
 
-  <div class="project">
-    <h3>Carbon Fibre Component Manufacturing</h3>
-    <img src="../images/personal_example2.jpg" alt="Carbon fibre project">
-    <p>
-      Hands-on manufacturing work producing carbon fibre components for automotive
-      applications.
-    </p>
-    <ul>
-      <li>Mould preparation and layup</li>
-      <li>Surface finishing</li>
-      <li>Material handling and safety</li>
-    </ul>
+  <div class="project-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-list">
+      <div class="skill">CAD Design</div>
+      <div class="skill">Fluid Dynamics</div>
+      <div class="skill">Energy Conversion</div>
+      <div class="skill">Prototyping</div>
+      <div class="skill">Engineering Analysis</div>
+    </div>
   </div>
 
-  <a href="../index.html">← Back to Portfolio</a>
+  <div class="project-process">
+    <h3>Process</h3>
+    <p>
+      Created CAD models, selected materials, fabricated turbine components, and conducted flow testing. Optimized blade angles and housing for maximum efficiency.
+    </p>
+  </div>
+
+  <div class="project-images">
+    <h3>Images</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160.png?text=Turbine+1" alt="Mini Turbine 1">
+      <img src="https://via.placeholder.com/300x160.png?text=Turbine+2" alt="Mini Turbine 2">
+      <img src="https://via.placeholder.com/300x160.png?text=Turbine+3" alt="Mini Turbine 3">
+    </div>
+  </div>
 </section>
+
+<!-- PROJECT 2 -->
+<section id="project2">
+  <h2>Robotic Arm Prototype</h2>
+
+  <div class="project-overview">
+    <h3>Overview</h3>
+    <p>
+      Developed a small-scale robotic arm to explore automation and mechatronics, integrating servos, sensors, and basic programming for motion control.
+    </p>
+  </div>
+
+  <div class="project-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-list">
+      <div class="skill">Arduino Programming</div>
+      <div class="skill">Mechanical Design</div>
+      <div class="skill">Servo Integration</div>
+      <div class="skill">Electronics</div>
+      <div class="skill">Prototyping</div>
+    </div>
+  </div>
+
+  <div class="project-process">
+    <h3>Process</h3>
+    <p>
+      Designed arm segments in CAD, 3D printed components, integrated electronics, and programmed motion sequences. Tested repeatability and refined precision.
+    </p>
+  </div>
+
+  <div class="project-images">
+    <h3>Images</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160.png?text=Robot+Arm+1" alt="Robotic Arm 1">
+      <img src="https://via.placeholder.com/300x160.png?text=Robot+Arm+2" alt="Robotic Arm 2">
+      <img src="https://via.placeholder.com/300x160.png?text=Robot+Arm+3" alt="Robotic Arm 3">
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT 3 -->
+<section id="project3">
+  <h2>Eco-friendly Motorbike Frame</h2>
+
+  <div class="project-overview">
+    <h3>Overview</h3>
+    <p>
+      Conceptualised and partially built a lightweight motorbike frame using sustainable materials, focusing on reducing weight while maintaining structural integrity.
+    </p>
+  </div>
+
+  <div class="project-skills">
+    <h3>Key Skills</h3>
+    <div class="skills-list">
+      <div class="skill">Structural Design</div>
+      <div class="skill">Material Selection</div>
+      <div class="skill">Prototyping</div>
+      <div class="skill">Sustainability</div>
+      <div class="skill">Mechanical Analysis</div>
+    </div>
+  </div>
+
+  <div class="project-process">
+    <h3>Process</h3>
+    <p>
+      Researched sustainable materials, designed frame geometry, fabricated prototype sections, and tested for stress and rigidity. Refined design for lightweight strength balance.
+    </p>
+  </div>
+
+  <div class="project-images">
+    <h3>Images</h3>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x160.png?text=Motorbike+1" alt="Motorbike Frame 1">
+      <img src="https://via.placeholder.com/300x160.png?text=Motorbike+2" alt="Motorbike Frame 2">
+      <img src="https://via.placeholder.com/300x160.png?text=Motorbike+3" alt="Motorbike Frame 3">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Henry Russell | Personal Engineering Projects</p>
+</footer>
 
 </body>
 </html>
+
