@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reverse Engineering Project</title>
+  <title>Reverse Engineering Projects | Henry Russell</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,56 +12,162 @@
       background-color: #f4f6f8;
       color: #333;
     }
+
     header {
-      background: #003366;
+      background-color: #003366;
       color: white;
-      padding: 1.5rem;
       text-align: center;
+      padding: 2.5rem 1rem;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+
+    header p {
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    /* PROJECT NAV */
+    .project-nav {
+      background: #00509e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .project-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .project-nav a:hover {
+      text-decoration: underline;
+    }
+
     section {
       max-width: 900px;
-      margin: 2rem auto;
+      margin: 2.5rem auto;
+      padding: 1.8rem;
       background: white;
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    img {
-      width: 100%;
-      margin-top: 1rem;
-      border-radius: 8px;
-    }
-    a {
+
+    h2 {
       color: #00509e;
-      text-decoration: none;
-      font-weight: bold;
+      border-bottom: 2px solid #00509e;
+      padding-bottom: 0.4rem;
+    }
+
+    /* SKILLS PILLS */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      background: #e9f0f8;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Reverse Engineering</h1>
+  <h1>Reverse Engineering Projects</h1>
+  <p>3D Scanning, CAD Reconstruction & Manufacturing</p>
 </header>
 
-<section>
-  <h2>Overview</h2>
-  <p>This project involved the reverse engineering of automotive suspension and engine mounting components using 3D scanning and SolidWorks modelling. The goal was to create accurate CAD references for future integration of a V10 engine into a hypercar chassis.</p>
+<!-- TOP PROJECT NAV -->
+<nav class="project-nav">
+  <a href="#project1">Automotive Component RE</a>
+  <a href="#project2">Mechanical Assembly Analysis</a>
+  <a href="#project3">Functional Prototype Reproduction</a>
+</nav>
 
-  <h2>Techniques Used</h2>
-  <ul>
-    <li>3D optical scanning</li>
-    <li>Mesh cleanup and conversion to solid geometry</li>
-    <li>Dimensional verification and tolerance analysis</li>
-    <li>Creation of parametric CAD models</li>
-  </ul>
+<!-- PROJECT 1 -->
+<section id="project1">
+  <h2>Automotive Component Reverse Engineering</h2>
+  <p>
+    Reverse engineering project focused on reproducing automotive components using
+    3D scanning, dimensional reconstruction, and CAD modelling. Existing parts were
+    digitised and rebuilt with consideration for real-world assembly constraints.
+  </p>
 
-  <h2>Images</h2>
-  <img src="../images/front_chassis.jpg" alt="Reverse engineered chassis model">
-
-  <h2>Back to Portfolio</h2>
-  <a href="../index.html">← Return to home</a>
+  <div class="skills-list">
+    <div class="skill">3D Scanning</div>
+    <div class="skill">SolidWorks CAD</div>
+    <div class="skill">Dimensional Interpretation</div>
+    <div class="skill">Assembly Analysis</div>
+    <div class="skill">3D Printing</div>
+  </div>
 </section>
+
+<!-- PROJECT 2 -->
+<section id="project2">
+  <h2>Mechanical Assembly Analysis & Redesign</h2>
+  <p>
+    This project involved analysing an existing mechanical assembly to understand
+    functional relationships, tolerancing assumptions, and manufacturing intent.
+    Reverse-engineered parts were redesigned to improve fit and manufacturability.
+  </p>
+
+  <div class="skills-list">
+    <div class="skill">Assembly Decomposition</div>
+    <div class="skill">Design for Manufacture</div>
+    <div class="skill">CAD Reconstruction</div>
+    <div class="skill">Problem Solving</div>
+    <div class="skill">Iterative Design</div>
+  </div>
+</section>
+
+<!-- PROJECT 3 -->
+<section id="project3">
+  <h2>Functional Prototype Reproduction</h2>
+  <p>
+    A full reverse engineering workflow from physical part to functional prototype.
+    Online reference data, measurement, and CAD modelling were combined to recreate
+    components, which were then manufactured using additive methods for testing and validation.
+  </p>
+
+  <div class="skills-list">
+    <div class="skill">Reverse Engineering Workflow</div>
+    <div class="skill">Technical Research</div>
+    <div class="skill">Tolerance Interpretation</div>
+    <div class="skill">Additive Manufacturing</div>
+    <div class="skill">Design Validation</div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Henry Russell | Mechanical Engineering Portfolio</p>
+</footer>
 
 </body>
 </html>
+
